@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3f0a13">
+  <title>Kamera Majlis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+
+  <!-- ============ 1. MUKA DEPAN ============ -->
+  <section id="screen-cover" class="screen is-active" aria-label="Kad jemputan">
+    <h1 class="script cover__title" data-bind="title">Walimatulurus</h1>
+    <div class="cover__art" id="coverArt">
+      <svg viewBox="0 0 600 520" aria-hidden="true">
+        <defs>
+          <linearGradient id="envG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3ead8"/><stop offset="1" stop-color="#e6d9bf"/></linearGradient>
+          <linearGradient id="pocketG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6efe0"/><stop offset="1" stop-color="#e9dcc2"/></linearGradient>
+          <pattern id="net" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H12M0 0V12" stroke="#d9c9ae" stroke-width="1.2"/></pattern>
+          <clipPath id="photoClip"><rect x="0" y="0" width="210" height="190"/></clipPath>
+          <g id="orchid">
+            <g fill="#fff" stroke="#e9dfdf" stroke-width="1">
+              <path d="M0 0C10-14 9-36 0-46C-9-36-10-14 0 0Z"/>
+              <path d="M0 0C10-14 9-36 0-46C-9-36-10-14 0 0Z" transform="rotate(135)"/>
+              <path d="M0 0C10-14 9-36 0-46C-9-36-10-14 0 0Z" transform="rotate(-135)"/>
+              <path d="M0 0C22-12 20-36 0-42C-20-36-22-12 0 0Z" transform="rotate(68)"/>
+              <path d="M0 0C22-12 20-36 0-42C-20-36-22-12 0 0Z" transform="rotate(-68)"/>
+            </g>
+            <path d="M0 0C9 6 8 18 0 22C-8 18-9 6 0 0Z" fill="#e9a8ba"/>
+            <circle r="4.5" cy="-2" fill="#d9a441"/>
+          </g>
+        </defs>
+        <!-- belakang sampul -->
+        <rect x="60" y="215" width="480" height="285" rx="6" fill="url(#envG)"/>
+        <path d="M60 222L300 90L540 222Z" fill="#e8dcc3"/>
+        <!-- doily hati -->
+        <g transform="translate(300 230)">
+          <path id="heart" d="M0 120C-150 30-175-70-110-110C-60-140-15-110 0-70C15-110 60-140 110-110C175-70 150 30 0 120Z" fill="#f7f0e2" stroke="#f7f0e2" stroke-width="26" stroke-linejoin="round" stroke-dasharray="0 27" stroke-linecap="round"/>
+          <path d="M0 120C-150 30-175-70-110-110C-60-140-15-110 0-70C15-110 60-140 110-110C175-70 150 30 0 120Z" fill="url(#net)" opacity=".9"/>
+          <path d="M0 96C-118 24-140-56-90-88C-50-112-12-88 0-56C12-88 50-112 90-88C140-56 118 24 0 96Z" fill="#f8f2e6" stroke="#d6c4a5" stroke-dasharray="3 5"/>
+        </g>
+        <!-- gambar -->
+        <g transform="translate(250 150) rotate(7)">
+          <rect x="-10" y="-10" width="230" height="230" fill="#fcfaf5" filter="drop-shadow(0 4px 6px rgba(0,0,0,.25))"/>
+          <g clip-path="url(#photoClip)" id="coverPhoto">
+            <rect width="210" height="190" fill="#d8d2c8"/>
+            <rect width="210" height="190" fill="url(#net)" opacity=".35"/>
+            <text x="105" y="118" text-anchor="middle" class="svg-mono" fill="#8e8579">D&amp;A</text>
+          </g>
+        </g>
+        <!-- poket depan -->
+        <path d="M60 300L300 430L540 300V500H60Z" fill="url(#pocketG)"/>
+        <path d="M60 500L270 380M540 500L330 380" stroke="#d8c8aa" stroke-width="2" fill="none"/>
+        <!-- tali -->
+        <path d="M58 450C160 440 240 470 300 448C360 428 450 455 545 440" stroke="#c39a62" stroke-width="7" fill="none" stroke-dasharray="10 3" stroke-linecap="round"/>
+        <path d="M300 448C270 400 225 412 248 438C262 455 290 450 300 448C330 405 378 412 356 440C342 456 312 452 300 448M300 448C285 470 270 500 255 512M300 448C315 470 330 495 350 505" stroke="#b88d55" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- orkid -->
+        <path d="M88 250C70 220 60 200 70 175" stroke="#7d9361" stroke-width="3" fill="none"/>
+        <use href="#orchid" transform="translate(115 255) scale(1.05) rotate(-20)"/>
+        <use href="#orchid" transform="translate(80 300) scale(.9) rotate(15)"/>
+        <use href="#orchid" transform="translate(150 300) scale(.8) rotate(-40)"/>
+        <use href="#orchid" transform="translate(500 290) scale(1.1) rotate(20)"/>
+        <use href="#orchid" transform="translate(535 345) scale(1) rotate(-10)"/>
+        <use href="#orchid" transform="translate(470 360) scale(.95) rotate(35)"/>
+        <use href="#orchid" transform="translate(520 410) scale(.85) rotate(5)"/>
+        <path d="M545 420C560 450 552 470 540 485" stroke="#7d9361" stroke-width="3" fill="none"/>
+        <circle cx="540" cy="488" r="8" fill="#a8bd84"/><circle cx="552" cy="468" r="6" fill="#b9cc95"/>
+      </svg>
+    </div>
+    <h2 class="script cover__names"><span data-bind="groom"></span> &amp; <span data-bind="bride"></span></h2>
+    <p class="cover__date" data-bind="dateLabel"></p>
+    <div class="cover__open">
+      <span class="vinyl vinyl--md" aria-hidden="true"></span>
+      <span class="cover__cta">
+        <span class="script">Sentuh untuk buka</span>
+        <span class="caps">♪&nbsp; Dengan iringan lagu</span>
+      </span>
+    </div>
+  </section>
+
+  <!-- ============ 2. LAMAN UTAMA ============ -->
+  <section id="screen-home" class="screen" aria-label="Laman utama">
+    <div class="collage" id="collage">
+      <canvas class="collage__oval" id="ovalCanvas" aria-label="Asyraf dan Dhirah"></canvas>
+      <div class="collage__mono lace-card">
+        <div class="mono"><span data-bind="mono0"></span><span data-bind="mono1"></span></div>
+        <p class="hashtag" data-bind="hashtag"></p>
+      </div>
+      <button class="vinyl vinyl--lg collage__vinyl" data-music-toggle aria-label="Main / henti lagu"></button>
+      <div class="collage__date lace-card">
+        <p class="date-big" data-bind="dateLabel"></p>
+        <p class="date-small" data-hijri>bersamaan</p>
+        <p class="date-hijri" data-bind="hijriLabel" data-hijri></p>
+      </div>
+      <div class="collage__pantun paper" id="pantun"></div>
+    </div>
+
+    <div class="home__form">
+      <label class="field-label" for="guestName">Nama anda (pilihan)</label>
+      <input id="guestName" class="field" maxlength="40" autocomplete="name" placeholder="cth. Mak Long Timah">
+      <button class="btn btn--primary" data-go="camera">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        Ambil Gambar
+      </button>
+      <button class="btn btn--ghost" data-go="album">Lihat Album Kenangan</button>
+      <p class="demo-note" id="demoNote" hidden>Mod demo — gambar disimpan dalam telefon ini sahaja.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. KAMERA ============ -->
+  <section id="screen-camera" class="screen screen--camera" aria-label="Kamera">
+    <header class="topbar">
+      <button class="icon-btn" data-back aria-label="Tutup">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <h2 class="script topbar__title" data-bind="names"></h2>
+      <button class="icon-btn" id="flipBtn" aria-label="Tukar kamera">
+        <svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12.5a3 3 0 0 1 5.2-2M15 13.5a3 3 0 0 1-5.2 2M14.6 8.6v2h-2M9.4 17.4v-2h2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </button>
+    </header>
+
+    <div class="stage" id="stage">
+      <canvas id="liveCanvas"></canvas>
+      <canvas id="overlayCanvas"></canvas>
+      <img id="resultImg" alt="Gambar anda" hidden>
+      <div class="countdown" id="countdown" aria-live="assertive"></div>
+      <div class="flash" id="flash"></div>
+      <div class="cam-msg" id="camMsg" hidden>
+        <p id="camMsgText"></p>
+        <button class="btn btn--small" id="camRetry">Cuba lagi</button>
+      </div>
+    </div>
+
+    <div class="cam-controls" id="camControls">
+      <div class="chips" id="frameChips" role="radiogroup" aria-label="Bingkai"></div>
+      <div class="filters" id="filterStrip" role="radiogroup" aria-label="Penapis"></div>
+      <div class="cam-bottom">
+        <button class="tool-btn" id="modeBtn" aria-label="Mod gambar">
+          <span class="tool-btn__box" id="modeIcon"></span><span id="modeLabel">Satu</span>
+        </button>
+        <button class="shutter" id="shutter" aria-label="Ambil gambar"><span></span></button>
+        <button class="tool-btn" id="galleryBtn" aria-label="Pilih dari galeri">
+          <span class="tool-btn__box"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" fill="currentColor"/><path d="M5 17l5-5 4 4 2-2 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <span>Galeri</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="result-actions" id="resultActions" hidden>
+      <button class="btn btn--primary" id="sendBtn">Hantar ke Album</button>
+      <div class="result-row">
+        <button class="btn btn--ghost" id="saveBtn">Simpan</button>
+        <button class="btn btn--ghost" id="retakeBtn">Ambil Semula</button>
+      </div>
+    </div>
+    <input type="file" id="galleryInput" accept="image/*" multiple hidden>
+  </section>
+
+  <!-- ============ 4. ALBUM ============ -->
+  <section id="screen-album" class="screen screen--album" aria-label="Album kenangan">
+    <header class="topbar topbar--album">
+      <button class="icon-btn" data-back aria-label="Kembali">
+        <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="topbar__center">
+        <h2 class="script topbar__title">Album Kenangan</h2>
+        <p class="topbar__sub" id="albumCount">Kenangan daripada tetamu</p>
+      </div>
+      <button class="icon-btn" id="refreshBtn" aria-label="Muat semula">
+        <svg viewBox="0 0 24 24"><path d="M19 12a7 7 0 1 1-2.05-4.95M19 4v4h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </header>
+    <div class="album" id="albumGrid"></div>
+    <div class="album-empty" id="albumEmpty" hidden>
+      <svg viewBox="0 0 300 200" aria-hidden="true">
+        <g transform="rotate(-6 150 100)">
+          <rect x="40" y="30" width="220" height="140" rx="4" fill="#f4ead5"/>
+          <path d="M40 34L150 112L260 34" fill="none" stroke="#dccaa8" stroke-width="2"/>
+          <path d="M40 166L125 98M260 166L175 98" stroke="#e3d3b6" stroke-width="2"/>
+          <path d="M150 60c-4-10-16-2-6 6M150 60c4-12 16-4 6 5M150 62v40" stroke="#b5a37a" stroke-width="1.5" fill="none"/>
+          <circle cx="150" cy="56" r="3" fill="#e2c36a"/><circle cx="142" cy="64" r="2.4" fill="#e2c36a"/><circle cx="158" cy="64" r="2.4" fill="#e2c36a"/>
+          <path d="M150 128c-14-10-24-20-24-30a10 10 0 0 1 24-4 10 10 0 0 1 24 4c0 10-10 20-24 30z" fill="#a51d2d"/>
+          <path d="M150 122c-9-7-16-14-16-21a7 7 0 0 1 16-3" fill="none" stroke="#c9404f" stroke-width="2"/>
+        </g>
+      </svg>
+      <p>Belum ada gambar — jadilah yang pertama!</p>
+    </div>
+    <footer class="album-bottom">
+      <button class="btn btn--primary" data-go="camera">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M4 8h3l2-3h6l2 3h3v11H4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        Ambil Gambar
+      </button>
+      <button class="vinyl vinyl--sm" data-music-toggle aria-label="Main / henti lagu"></button>
+    </footer>
+  </section>
+</main>
+
+<!-- lihat gambar -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Lihat gambar">
+  <div class="lightbox__card">
+    <img id="lbImg" alt="">
+    <p class="lightbox__name script" id="lbName"></p>
+  </div>
+  <div class="lightbox__actions">
+    <button class="btn btn--primary btn--small" id="lbSave">Simpan</button>
+    <button class="btn btn--danger btn--small" id="lbDelete" hidden>Padam</button>
+    <button class="btn btn--ghost btn--small" id="lbClose">Tutup</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="frames.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
