@@ -678,6 +678,7 @@
   function bindText() {
     const map = { ...CFG, names: NAMES, mono0: CFG.monogram[0], mono1: CFG.monogram[1] };
     $$('[data-bind]').forEach(el => { el.textContent = map[el.dataset.bind] ?? ''; });
+    $('#coverMono').textContent = CFG.monogram.join('&');
     if (!CFG.hijriLabel) $$('[data-hijri]').forEach(el => el.hidden = true);
     $('#pantun').innerHTML = '';
     (CFG.pantun || []).forEach(l => { const p = document.createElement('p'); p.textContent = l; $('#pantun').appendChild(p); });

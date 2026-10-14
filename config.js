@@ -10,8 +10,8 @@ window.MAJLIS = {
   dateLabel: 'Disember 2026',     // muka depan & laman utama
   dateShort: '24 · 12 · 2026',    // dicetak pada bingkai gambar
   hijriLabel: 'Rejab 1448',       // kosongkan ('') untuk sembunyi. Sila semak tarikh hijrah.
-  monogram: ['D', 'A'],
-  hashtag: '#D&AInEveryChapter',
+  monogram: ['B', 'G'],
+  hashtag: '#B&GInEveryChapter',
   pantun: [
     'Tiup serunai di atas kota,',
     'Uda memupuk bunga melati;',
