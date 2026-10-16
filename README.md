@@ -1,4 +1,4 @@
-# Kamera Majlis — Asyraf & Dhirah 📷💍
+# Kamera Majlis — Groom & Bride 📷💍
 
 Aplikasi kamera digital untuk tetamu majlis. Tetamu imbas kod QR → ambil gambar dengan bingkai & penapis → gambar masuk terus ke album dan Google Drive pengantin.
 
